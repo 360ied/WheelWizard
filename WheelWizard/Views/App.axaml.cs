@@ -144,10 +144,8 @@ public class App : Application
         {
             var launchedFromProtocol = await OpenGameBananaModWindowAsync();
 
-            var updateService = Services.GetRequiredService<IAutoUpdaterSingletonService>();
             var whWzDataService = Services.GetRequiredService<IWhWzDataSingletonService>();
 
-            await updateService.CheckForUpdatesAsync();
             await whWzDataService.LoadBadgesAsync();
             InitializeManagers();
 
